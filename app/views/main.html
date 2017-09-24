@@ -1,0 +1,279 @@
+<div class = "">
+  <div class = "tDivL">
+    <table>
+      <tbody>
+        <tr>
+          <td class = "bold header" colspan = "2">The Church of<br><span class = "extraHead">Jesus Christ</span><br>of Latter Day Saints</td>
+        </tr>
+        <tr>
+          <td colspan = "2"><img class = "temple" align: "center" ng-src = "{{image.source}}"><span class = "small">Which temple is this?</span></td>
+        </tr>
+        <tr>
+          <td class = "bold" colspan = "2">{{ward}} Sacrament Meeting</td>
+        </tr>
+        <tr>
+          <td class = "bold">Presiding</td>
+          <td>{{presiding}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Conducting</td>
+          <td>{{conducting}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Organist</td>
+          <td>{{organist}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Chorister</td>
+          <td>{{chorister}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Welcome and Announcements</td>
+        </tr>
+        <tr>
+          <td class = "bold">Opening Hymn #{{hymns.opening.number}}</td>
+          <td class = "ital">{{hymns.opening.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Invocation</td>
+          <td>{{invocation}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Ward Business</td>
+        </tr>
+        <tr>
+          <td class = "bold">Sacrament Hymn #{{hymns.sacrament.number}}</td>
+          <td class = "ital">{{hymns.sacrament.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Administration of the Sacrament</td>
+        </tr>
+        <tr ng-show = "fast">
+          <td class = "bold">Bearing of Testimonies</td>
+        </tr>
+        <tr ng-show = "program">
+          <td class = "bold">{{programName}}</td>
+        </tr>
+        <tr ng-repeat = "y in youthSpeakers">
+          <td class = "bold">Youth Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr ng-repeat = "y in pSpeakers">
+          <td class = "bold">Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr ng-hide = "fast || program">
+          <td class = "bold">Intermediate Hymn <span ng-if = "hymns.intermediate.number != ''">#</span>{{hymns.intermediate.number}}</td>
+          <td class = "ital">{{hymns.intermediate.name}}</td>
+        </tr>
+        <tr ng-repeat = "y in aSpeakers">
+          <td class = "bold">Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr>
+          <td  ng-hide = "program" class = "bold">Closing Hymn #{{hymns.closing.number}}</td>
+          <td class = "ital">{{hymns.closing.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Benediction</td>
+          <td>{{benediction}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class = "tDivR">
+
+    <table>
+      <tbody>
+        <tr>
+          <td class = "bold header" colspan = "2">The Church of<br><span class = "extraHead">Jesus Christ</span><br>of Latter Day Saints</td>
+        </tr>
+        <tr>
+          <td colspan = "2"><img class = "temple" ng-src = "{{image.source}}"><span class = "small">Which temple is this?</span></td>
+        </tr>
+        <tr>
+          <td class = "bold" colspan = "2">{{ward}} Sacrament Meeting</td>
+        </tr>
+        <tr>
+          <td class = "bold">Presiding</td>
+          <td>{{presiding}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Conducting</td>
+          <td>{{conducting}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Organist</td>
+          <td>{{organist}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Chorister</td>
+          <td>{{chorister}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Welcome and Announcements</td>
+        </tr>
+        <tr>
+          <td class = "bold">Opening Hymn #{{hymns.opening.number}}</td>
+          <td class = "ital">{{hymns.opening.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Invocation</td>
+          <td>{{invocation}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Ward Business</td>
+        </tr>
+        <tr>
+          <td class = "bold">Sacrament Hymn #{{hymns.sacrament.number}}</td>
+          <td class = "ital">{{hymns.sacrament.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Administration of the Sacrament</td>
+        </tr>
+        <tr ng-show = "fast">
+          <td class = "bold">Bearing of Testimonies</td>
+        </tr>
+        <tr ng-show = "program">
+          <td class = "bold">{{programName}}</td>
+        </tr>
+        <tr ng-repeat = "y in youthSpeakers">
+          <td class = "bold">Youth Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr ng-repeat = "y in pSpeakers">
+          <td class = "bold">Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr ng-hide = "fast || program">
+          <td class = "bold">Intermediate Hymn <span ng-if = "hymns.intermediate.number != ''">#</span>{{hymns.intermediate.number}}</td>
+          <td class = "ital">{{hymns.intermediate.name}}</td>
+        </tr>
+        <tr ng-repeat = "y in aSpeakers">
+          <td class = "bold">Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr ng-hide = "program">
+          <td class = "bold">Closing Hymn #{{hymns.closing.number}}</td>
+          <td class = "ital">{{hymns.closing.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Benediction</td>
+          <td>{{benediction}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class = "pagebreak">
+  <div class = "tDivL">
+    <table>
+
+      <tbody>
+        <tr>
+          <td class = "bold smHead" colspan = "2">Reminders</td>
+        </tr>
+        <tr ng-repeat = "y in sReminders">
+          <td colspan = "2">-{{y}}</td>
+        </tr>
+      </tbody>
+      <tbody ng-repeat = "y in reminders">
+        <tr>
+          <td colspan = "2" class = "bold">{{y.title}}</td>
+        </tr>
+        <tr ng-repeat = "x in y.data">
+          <td colspan = "2"><strong>{{x.name}}</strong>-{{x.info}}</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td colspan = "2" class = "bold smHead">Announcements</td>
+        </tr>
+        <tr ng-repeat = "y in announcements">
+          <td colspan = "2"><span class = "bold">{{y.name}}</span>-{{y.data}}</td>
+        </tr>
+        <tr ng-repeat = "y in sAnnouncements">
+          <td class = "small" colspan = "2">{{y}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "bold smHead">Emergency Preparedness</td>
+        </tr>
+        <tr>
+          <td colspan = "2">Each month we'll give a new recipe using only storage items.  Mighty tasty!</td>
+        </tr>
+          <td class = "bold">{{emergencyPrep.recipeName}}</td>
+        <tr>
+        <tr>
+          <td>
+            <ol>
+              <li ng-repeat = "y in emergencyPrep.recipe">{{y}}</li>
+            </ol>
+          </td>
+        </tr>
+          <td>{{emergencyPrep.contact}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "small">Temple Answer: {{image.name}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "small">Temple Fact: {{image.fact}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class = "tDivR">
+    <table>
+
+      <tbody>
+        <tr>
+          <td class = "bold smHead" colspan = "2">Reminders</td>
+        </tr>
+        <tr ng-repeat = "y in sReminders">
+          <td colspan = "2">-{{y}}</td>
+        </tr>
+      </tbody>
+      <tbody ng-repeat = "y in reminders">
+        <tr>
+          <td colspan = "2" class = "bold">{{y.title}}</td>
+        </tr>
+        <tr ng-repeat = "x in y.data">
+          <td colspan = "2"><strong>{{x.name}}</strong>-{{x.info}}</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td colspan = "2" class = "bold smHead">Announcements</td>
+        </tr>
+        <tr ng-repeat = "y in announcements">
+          <td colspan = "2"><span class = "bold">{{y.name}}</span>-{{y.data}}</td>
+        </tr>
+        <tr ng-repeat = "y in sAnnouncements">
+          <td class = "small" colspan = "2">{{y}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "bold smHead">Emergency Preparedness</td>
+        </tr>
+        <tr>
+          <td colspan = "2">Each month we'll give a new recipe using only storage items.  Mighty tasty!</td>
+        </tr>
+          <td class = "bold">{{emergencyPrep.recipeName}}</td>
+        <tr>
+        <tr>
+          <td>
+            <ol>
+              <li ng-repeat = "y in emergencyPrep.recipe">{{y}}</li>
+            </ol>
+          </td>
+        <tr>
+          <td>{{emergencyPrep.contact}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "small">Temple Answer: {{image.name}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "small">Temple Fact: {{image.fact}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

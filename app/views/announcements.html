@@ -1,0 +1,45 @@
+<h2>Announcements</h1>
+<table class = "table">
+
+      <tbody>
+        <tr ng-repeat = "y in sReminders">
+          <td colspan = "2">-{{y}}</td>
+        </tr>
+      </tbody>
+      <tbody ng-repeat = "y in reminders">
+        <tr>
+          <td colspan = "2" class = "bold">{{y.title}}</td>
+        </tr>
+        <tr ng-repeat = "x in y.data">
+          <td colspan = "2"><strong>{{x.name}}</strong>-{{x.info}}</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr ng-repeat = "y in announcements">
+          <td colspan = "2"><span class = "bold">{{y.name}}</span>-{{y.data}}</td>
+        </tr>
+        <tr ng-repeat = "y in sAnnouncements">
+          <td class = "small" colspan = "2">{{y}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "bold smHead">Emergency Preparedness</td>
+        </tr>
+        <tr>
+          <td colspan = "2">Each month we'll give a new recipe using only storage items.  Mighty tasty!</td>
+        </tr>
+          <td class = "bold">{{emergencyPrep.recipeName}}</td>
+        <tr>
+        <tr>
+          <td>
+            <ol>
+              <li ng-repeat = "y in emergencyPrep.recipe">{{y}}</li>
+            </ol>
+          </td>
+        </tr>
+          <td>{{emergencyPrep.contact}}</td>
+        </tr>
+        <tr>
+          <td colspan = "2" class = "small">Temple Answer: {{image.name}}</td>
+        </tr>
+      </tbody>
+    </table>

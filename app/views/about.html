@@ -1,0 +1,77 @@
+<h1 style = "text-align: center;"><small>The Church of </small>Jesus Christ<small> of Latter Day Saints</small></h1>
+<table class = "table table-striped">
+      <tbody>
+          <td colspan = "2"><img class = "temple" align: "center" ng-src = "{{image.source}}"><br><span class = "small rotate">Which temple is this?</span></td>
+        </tr>
+        <tr>
+          <td class = "bold" colspan = "2">{{ward}} Sacrament Meeting</td>
+        </tr>
+        <tr>
+          <td class = "bold">Presiding</td>
+          <td>{{presiding}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Conducting</td>
+          <td>{{conducting}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Organist</td>
+          <td>{{organist}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Chorister</td>
+          <td>{{chorister}}</td>
+        </tr>
+        <tr>
+          <td class = "bold" colspan = "2">Welcome and Announcements</td>
+        </tr>
+        <tr>
+          <td class = "bold">Opening Hymn #{{hymns.opening.number}}</td>
+          <td class = "ital">{{hymns.opening.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Invocation</td>
+          <td>{{invocation}}</td>
+        </tr>
+        <tr>
+          <td class = "bold" colspan = "2">Ward Business</td>
+        </tr>
+        <tr>
+          <td class = "bold">Sacrament Hymn #{{hymns.sacrament.number}}</td>
+          <td class = "ital">{{hymns.sacrament.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold" colspan = "2">Administration of the Sacrament</td>
+        </tr>
+        <tr ng-show = "fast">
+          <td class = "bold">Bearing of Testimonies</td>
+        </tr>
+        <tr ng-show = "program">
+          <td class = "bold">{{programName}}</td>
+        </tr>
+        <tr ng-repeat = "y in youthSpeakers">
+          <td class = "bold">Youth Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr ng-repeat = "y in pSpeakers">
+          <td class = "bold">Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr ng-hide = "fast || program">
+          <td class = "bold">Intermediate Hymn #{{hymns.intermediate.number}}</td>
+          <td class = "ital">{{hymns.intermediate.name}}</td>
+        </tr>
+        <tr ng-repeat = "y in aSpeakers">
+          <td class = "bold">Speaker</td>
+          <td>{{y}}</td>
+        </tr>
+        <tr>
+          <td  ng-hide = "program" class = "bold">Closing Hymn #{{hymns.closing.number}}</td>
+          <td class = "ital">{{hymns.closing.name}}</td>
+        </tr>
+        <tr>
+          <td class = "bold">Benediction</td>
+          <td>{{benediction}}</td>
+        </tr>
+      </tbody>
+    </table>
